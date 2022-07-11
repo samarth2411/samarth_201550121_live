@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        *{
+            padding: 0px;
+        margin: 0px;
+        }
+
+/* navigation bar  */
+
+body{
+    background: url('./image1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    /* background-color: rgb(189, 29, 29); */
+    background: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+#navbar ul{
+    display: flex;
+    /* align-items: center; */
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 17px;
+}
+#navbar ul li a{
+    padding: 4px 16px;
+    display: block;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 12px 18px;
+}
+#navbar ul li a:hover{
+    /* background-color: white; */
+    color: red;
+}
+/* Home section  */
+#home{
+    display: contents;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    height: 100%;
+    padding: 12px 200px;
+}
+#home::before{
+    content: "";
+    background: url('/img/cheers-g1a315a4b6_1920.jpg') no-repeat center center/cover ;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 1;
+    z-index: -1;
+
+}
+#home p{
+    color: white;
+    font-size: 28px;
+    margin: 190px 79px 12px 12px;
+    padding: 21px 45px;
+}
+#home h1{
+    color: white;
+    font-size: 74px
+    ;
+    margin: 5px 77px;
+    padding: 3px 3px ;
+}
+#home h2{
+    color: white;
+    font-size: 74px
+    ;
+    margin: 5px 77px;
+    padding: 3px 3px ;
+}
+#buttons>a{
+         margin: 15px;
+          border: 2px solid white;
+        padding: 5px 17px;
+        display: inline-block;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 12px;
+            
+        }
+        #buttons>a:hover{
+            background-color: rgb(240, 88, 23);
+            color: white;
+        }
+
+    .footer-last-class{
+        background-color: rgb(218, 236, 252);
+       margin-top: 34px;
+        }
+    ul li{
+        list-style: none;
+        margin: 12px;
+        
+    }
+    .ul-class{
+        display: flex;
+        justify-content: space-around;
+        font-size: larger;
+        
+    }
+    .search{
+        display: inline-block;
+        width: 2vw;
+        padding-left: 2vw;
+    }
+    .search1{
+        display: flex;
+        margin-left:350px ;
+        padding: 5px;
+    }
+    </style>
+
+</head>
+<body>
+    <nav id="navbar">
+        <!-- <div id="logo">
+            <img src="./girl-woman-female-dance.jpg" alt="musicduniya">
+        </div> -->
+        <ul>
+            <li class="item" ><a href="#">HOME</a></li>
+            <li class="item" ><a href="#">PAGES</a></li>
+            <li class="item" ><a href="#">PORTIFOLIOS</a></li>
+            <li class="item" ><a href="#">HEADERS</a></li>
+            <li class="item" ><a href="#">ELEMENTS</a></li>
+            <li class="item" ><a href="#">BLOG</a></li>
+        </ul>
+        <div class="search1">
+            <img class="search" src="./search image.jpeg" alt="Search Image">
+            <img class="search" src="./shopping image.jpeg" alt="Shopping Image">
+            <img class="search" src="./3 Bars.jpeg" alt="3 Bars">
+
+        </div>
+
+        
+        
+    </nav>
+    <section id="home">
+        <h1 class="heading">Perfect images </h1>
+      <h2>  for perfect websites</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cumque, veritatis tempora facere facilis illo dolore nisi ex fugiat sed at minima quas ipsam ipsa.</p>
+
+        <div id="buttons">
+            <a id="exploreMore"  href="#">EXPLORE MORE</a>
+            <a id="buyNow"  href="#">BUY NOW</a>
+        </div>
+    </section>
+    
+
+<footer class="footer-last-class" id="footer-last-id">
+    <ul class="ul-class" id="ul-id">
+        <li class="list">Samarth</li>
+        <li class="list">201550121</li>
+        <li class="list">GLA University ,Matura</li>
+        <li class="list" id="live_date"></li>
+    </ul>
+</footer>
+
+</body>
+<script>
+
+        
+    var div_add = document.createElement("div");
+    //var today = new Date();
+    let today = new Date().toLocaleDateString();
+   // console.log(today);
+   var text = document.createTextNode(today);
+    div_add.appendChild(text);
+    document.getElementById('live_date').appendChild(div_add);
+
+</script>
+</html>
